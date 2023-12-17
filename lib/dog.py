@@ -5,4 +5,9 @@ CURSOR = CONN.cursor()
 
 class Dog:
     
-    pass
+    # Initializing instance attributes
+    def __init__(self, name, breed):
+        self.id = None
+        self.name = name
+        self.breed = breed
+    
