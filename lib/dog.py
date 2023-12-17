@@ -23,3 +23,12 @@ class Dog:
             )
         """
         CURSOR.execute(sql)
+
+    # 'drop_table' class method deletes table 'dogs' if it exists
+    @classmethod
+    def drop_table(cls):
+        sql = """
+            DROP TABLE IF EXISTS songs
+        """
+
+        CURSOR.execute(sql)
