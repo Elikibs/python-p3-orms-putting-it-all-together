@@ -11,3 +11,15 @@ class Dog:
         self.name = name
         self.breed = breed
     
+
+    # 'create_table' class method that creates 'dogs' table in our database
+    @classmethod
+    def create_table(cls):
+        sql = """
+            CREATE TABLE IF NOT EXISTS dogs(
+                id INTEGER PRIMARY KEY,
+                name TEXT,
+                breed TEXT
+            )
+        """
+        CURSOR.execute(sql)
